@@ -11,9 +11,8 @@
         <!-- TOP-LEVEL HTML ELEMENTS -->
         <div class = "top-level">
             <img class = "logo">
-            <h1 class = "main-heading"> HOME </h1>
-            <nav>
-                <ul>
+            <nav class = "nav-bar">
+                <ul class = "main-nav">
                     <li>
                         <a href="index.html">HOME</a>
                     </li>
@@ -26,16 +25,17 @@
 
                 </ul>
             </nav>
+            <h1 class = "main-heading"> HOME </h1>
         </div>
 
         <!-- MAIN CONTENT HTML ELEMENTS -->
         <div class = "main-content">
             <div class = "find">
-
+                <h1>Find a Market</h1>
             </div>
 
             <div class = "map">
-
+                <h1>Map</h1>
             </div>
 
         </div>
@@ -45,7 +45,6 @@
     <script type="module">
         import { extract_data } from "./extractdata.js";
         extract_data()
-
         
     </script>
   </body>

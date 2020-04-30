@@ -3,16 +3,30 @@ body {
     max-width: 960px;
     background-color: #69FFC0;
     margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif
 }
 
-nav {
+div {
+    background-color: lightgray;
+}
+
+.nav-bar {
     width: 100%; /* ensures that the nav takes up the whole body width */
     margin: 20px 0; /* provides top and bottom margin space */
     background-color: white;
+    font-size: 18px;
+    /*padding-bottom: 10px;*/
+}
+
+.main-nav {
+    list-style-type: none;
 }
 
 nav ul {
     width: 100%; /* ensures that the links take up the whole width of the nav */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 nav ul li {
@@ -24,7 +38,34 @@ nav ul li {
     width: 100%; 
 }
 
+.top-level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
 .main-heading {
     text-align: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.find {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-color: black;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-color: black;
 }
 
