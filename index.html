@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!--<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
+  </head>
+  <body>
+    <div class = "wrapper">
+
+        <!-- TOP-LEVEL HTML ELEMENTS -->
+        <div class = "top-level">
+            <img class = "logo">
+            <h1 class = "main-heading"> HOME </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="about.html">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">DOCUMENTATION</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- MAIN CONTENT HTML ELEMENTS -->
+        <div class = "main-content">
+            <div class = "find">
+
+            </div>
+
+            <div class = "map">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="module">
+        import { extract_data } from "./extractdata.js";
+        extract_data()
+
+        
+    </script>
+  </body>
+</html>
