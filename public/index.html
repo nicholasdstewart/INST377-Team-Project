@@ -55,6 +55,8 @@
 
 
     <script type="module">
+        //import { extract_data } from '/server_files/extractdata.js'
+        //extract_data()
 
         /*********************/
         /* JS for Market Map */
@@ -83,9 +85,17 @@
         'className' : 'custom'
         }
 
-        mark1 = L.marker([38.9881, -76.9414]).bindPopup(customPopup, customOptions).addTo(mymap).openPopup();
+        //mark1 = L.marker([38.9881, -76.9414]).bindPopup(customPopup, customOptions).addTo(mymap).openPopup();
 
+        // Fetching data from our own server:
+        fetch("/api", {
+          method: "GET"
+        })
         
+        // Listing out all of the data on the client-side:
+        //console.log(res.data)
+
     </script>
+
   </body>
 </html>

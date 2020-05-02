@@ -13,8 +13,5 @@ export function extract_data() {
             })
 
             console.log(market_names)
-
-            
-
         })
 }

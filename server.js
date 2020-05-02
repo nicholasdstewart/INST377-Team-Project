@@ -25,6 +25,46 @@ import { router } from './server_files/api_router.js';
   app.use(express.static('public'));
   //app.use('/api', routes);
 
+// ********************************************** //
+// NOTE: Function to pull data from PG County API //
+// ********************************************** //
+function processDataForFrontEnd(req, res) {
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'; // Enter the URL for the data you would like to retrieve here
+
+  // Your Fetch API call starts here
+  // Note that at no point do you "return" anything from this function -
+  // it instead handles returning data to your front end at line 41.
+    fetch(baseURL)
+      .then((r) => r.json())
+      .then((data) => {
+        console.log(data);
+        res.send({ data: data }); // here's where we send data to our API
+      })
+      .catch((err) => {
+        console.log(err);
+        res.redirect('/error');
+      });
+}
+
+  /****************/
+  /* API Endpoint */
+  /****************/
+
+  app.route('/api')
+    // GET REQUEST HANDLING BELOW: //
+    .get((req, res) => {
+      processDataForFrontEnd(req, res)
+      console.log("/api get request", req)
+    })
+    // POST REQUEST HANDLING BELOW: //
+    .post((req, res) => {
+      console.log("/api post request", req.body);
+    })
+    // PUT REQUEST HANDLING BELOW: //
+    .put((req, res) => {
+      console.log("/api put request", req.body);
+    })
+
   app.listen(port, () => {
     console.log(`The app is listening on port ${port}!`)
   });
