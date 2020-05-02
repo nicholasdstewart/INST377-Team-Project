@@ -39,15 +39,14 @@ function processDataForFrontEnd(req, res) {
       .then((data) => {
         //console.log(data);
 
-        //const market_names = ['Market 1', 'Market 2'];
-        const market_names = [];
+        const market_locations = [];
 
         // Retrieving all market names and storing them in an array
         Object.entries(data).map((item) => {
-        market_names.push(item[1]["market_name"])
+        market_locations.push({name: item[1]["market_name"], latitude: item[1]["location"]["latitude"], longitude: item[1]["location"]["longitude"]})
         })
-        console.log(market_names);
-        res.send({ data: market_names }); // here's where we send data to our API
+        console.log(market_locations);
+        res.send({ data: market_locations }); // here's where we send data to our API
       })
       .catch((err) => {
         console.log(err);

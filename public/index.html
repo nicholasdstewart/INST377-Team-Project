@@ -78,21 +78,30 @@
 
         // Creating a marker and pop up:
         // Code Referenced: https://joshuafrazier.info/leaflet-basics/ */
-        const customPopup = 'Eppley Recreation Center';
+        //const customPopup = 'Eppley Recreation Center';
 
         const customOptions = {
         'maxWidth': '500',
         'className' : 'custom'
         }
 
-        //mark1 = L.marker([38.9881, -76.9414]).bindPopup(customPopup, customOptions).addTo(mymap).openPopup();
-
         // Fetching data from our own server:
         fetch("/api", {
           method: "GET"
         })
-        .then((data) => data.text())
-        .then((textresponse) => console.log(textresponse))
+        .then((data) => data.json())
+        .then((jsonresponse) => {
+            
+            //console.log(jsonresponse["data"])
+
+            Object.entries(jsonresponse["data"]).map((item) => {
+                console.log(item[1])
+                /* ADD MARKERS AND POP UPS HERE */
+                L.marker([item[1]["latitude"], item[1]["longitude"]]).bindPopup(item[1]["name"], customOptions).addTo(mymap).openPopup();
+            })
+        
+        })
+        
         
         //.then(console.log(data.text()))
         
