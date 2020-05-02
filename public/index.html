@@ -91,6 +91,10 @@
         fetch("/api", {
           method: "GET"
         })
+        .then((data) => data.text())
+        .then((textresponse) => console.log(textresponse))
+        
+        //.then(console.log(data.text()))
         
         // Listing out all of the data on the client-side:
         //console.log(res.data)

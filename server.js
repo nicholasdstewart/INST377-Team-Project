@@ -29,7 +29,7 @@ import { router } from './server_files/api_router.js';
 // NOTE: Function to pull data from PG County API //
 // ********************************************** //
 function processDataForFrontEnd(req, res) {
-  const baseURL = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'; // Enter the URL for the data you would like to retrieve here
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/sphi-rwax.json'; // Enter the URL for the data you would like to retrieve here
 
   // Your Fetch API call starts here
   // Note that at no point do you "return" anything from this function -
@@ -37,8 +37,17 @@ function processDataForFrontEnd(req, res) {
     fetch(baseURL)
       .then((r) => r.json())
       .then((data) => {
-        console.log(data);
-        res.send({ data: data }); // here's where we send data to our API
+        //console.log(data);
+
+        //const market_names = ['Market 1', 'Market 2'];
+        const market_names = [];
+
+        // Retrieving all market names and storing them in an array
+        Object.entries(data).map((item) => {
+        market_names.push(item[1]["market_name"])
+        })
+        console.log(market_names);
+        res.send({ data: market_names }); // here's where we send data to our API
       })
       .catch((err) => {
         console.log(err);
@@ -54,7 +63,7 @@ function processDataForFrontEnd(req, res) {
     // GET REQUEST HANDLING BELOW: //
     .get((req, res) => {
       processDataForFrontEnd(req, res)
-      console.log("/api get request", req)
+      console.log("/api get request")
     })
     // POST REQUEST HANDLING BELOW: //
     .post((req, res) => {
