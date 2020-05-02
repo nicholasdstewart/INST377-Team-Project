@@ -1,7 +1,17 @@
+/***************************/
+/* COLORS:
+/* -- light-green: #69FFA9
+/* -- slightly darker green: #34B36B
+/* -- dark pink: #FF877D
+/* -- light pink: #FF9F96
+/* -- reddish: #B34E46
+/****************************/
+
+
 body {
     width: 100%;
     /*max-width: 960px;*/
-    background-color: #69FFC0;
+    background-color: #69FFA9;
     margin: 0 auto;
     font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 30px;
@@ -14,7 +24,7 @@ body {
     padding-bottom: 1px;
     padding-top: 1px;
     /*border: 1px solid rgba(0, 0, 0, 0.2);*/
-    background-color: #FF8069;
+    background-color: #FF9F96;
     color: white;
 }
 
@@ -73,6 +83,16 @@ nav ul li {
     height: 600px;
     background-color: white;
     border-style: double;
+}
+
+.custom .leaflet-popup-tip, 
+.custom .leaflet-popup-content-wrapper {
+  background: white;;
+  color: black;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /************************/

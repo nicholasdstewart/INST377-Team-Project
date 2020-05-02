@@ -45,7 +45,7 @@ function processDataForFrontEnd(req, res) {
         Object.entries(data).map((item) => {
         market_locations.push({name: item[1]["market_name"], latitude: item[1]["location"]["latitude"], longitude: item[1]["location"]["longitude"]})
         })
-        console.log(market_locations);
+        //console.log(market_locations);
         res.send({ data: market_locations }); // here's where we send data to our API
       })
       .catch((err) => {
