@@ -2,7 +2,7 @@
 // Setting up the API for the server //
 // ********************************* //
 
-app.route('/api')
+export function router() {app.route('/api')
 
   // GET REQUEST HANDLING BELOW: //
   .get((req, res) => {
@@ -16,7 +16,4 @@ app.route('/api')
   .put((req, res) => {
     console.log("/api put request", req.body);
   })
-
-app.listen(port, () => {
-  console.log(`The app is listening on port ${port}!`)
-});
+}
