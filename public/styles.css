@@ -26,6 +26,7 @@ body {
     /*border: 1px solid rgba(0, 0, 0, 0.2);*/
     background-color: #FF9F96;
     color: white;
+    box-shadow: 0px 5px 10px black;
 }
 
 .main-nav {
@@ -169,6 +170,14 @@ hr {
     width: 800px;
     color: lightgray;
     border-color: lightgray;
+}
+
+#jasmine, #henley, #nicholas {
+    transition: transform .15s;
+}
+
+#jasmine:hover, #henley:hover, #nicholas:hover {
+    transform: scale(1.5);
 }
 
 /********************************/
