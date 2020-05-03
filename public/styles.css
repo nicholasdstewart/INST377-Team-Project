@@ -126,8 +126,13 @@ nav a:active {
 }
 
 .filter {
-    padding-left: 20px;
+    padding: 20px;
     padding-top: 5px;
+}
+
+.filter p {
+    font-size: larger;
+    text-decoration: underline #FF9F96;
 }
 
 .map-box {
