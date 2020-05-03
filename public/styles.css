@@ -147,6 +147,14 @@ nav a:active {
   text-transform: uppercase;
 }
 
+h2 {
+    transition: transform .15s
+}
+
+.find:hover h2, .map:hover h2 {
+    transform: scale(1.5)
+}
+
 /************************/
 /* Style for About Page */
 /************************/
