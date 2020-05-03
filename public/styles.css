@@ -1,46 +1,49 @@
 /***************************/
 /* COLORS:
-/* -- light-green: #69FFA9
-/* -- slightly darker green: #34B36B
+/* -- light green: #96FF7A
+/* -- dark green: #2C661D
 /* -- dark pink: #FF877D
 /* -- light pink: #FF9F96
 /* -- reddish: #B34E46
 /****************************/
 
-
 body {
     width: 100%;
     /*max-width: 960px;*/
-    background-color: #69FFA9;
+    background-color: #96FF7A;
     margin: 0 auto;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: josefin-sans, sans-serif;
     margin-bottom: 30px;
 }
 
-.nav-bar {
+nav {
     width: 100%; /* ensures that the nav takes up the whole body width */
+    height: 75px;
     margin: 0 0; /* provides top and bottom margin space */
-    font-size: 18px;
     padding-bottom: 1px;
     padding-top: 1px;
     /*border: 1px solid rgba(0, 0, 0, 0.2);*/
-    background-color: #FF9F96;
-    color: white;
-}
-
-.main-nav {
-    list-style-type: none;
-}
-
-nav ul {
-    width: 100%; /* ensures that the links take up the whole width of the nav */
+    background-color: #2C661D;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-nav ul li {
-    width: 33.33%; 
+nav a {
+    /*width: 100%;  ensures that the links take up the whole width of the nav */
+    font-size: 25px;
+    margin: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #FF9F96;
 }
 
 .main-heading {
@@ -50,7 +53,7 @@ nav ul li {
 .main-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 /************************/
@@ -76,13 +79,15 @@ nav ul li {
     height: 600px;
     background-color: white;
     border-style: double;
+    margin-right: 15px;
 }
 
 .map-box {
-    width: 500px;
+    width: 675px;
     height: 600px;
     background-color: white;
     border-style: double;
+    margin-left: 15px;
 }
 
 .custom .leaflet-popup-tip, 
