@@ -3,6 +3,7 @@
   <head>
     <title>Home Page</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald:300,400&display=swap" rel="stylesheet">
     <!--<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
     <link
       rel="stylesheet"
@@ -42,7 +43,64 @@
         <div class = "main-content">
             <div class = "find">
                 <h2>Find a Market</h2>
-                <div class = "find-box"></div>
+                <div class = "find-box">
+                    <div class = "filter">
+
+                        <p>Days:</p>
+                        <input type = "checkbox" id = "sunday" name = "sunday">
+                        <label for = "sunday">Su</label>
+                        <input type = "checkbox" id = "monday" name = "monday">
+                        <label for = "monday">M</label>
+                        <input type = "checkbox" id = "tuesday" name = "tuesday">
+                        <label for = "tuesday">T</label>
+                        <input type = "checkbox" id = "wednesday" name = "wednesday">
+                        <label for = "wednesday">W</label>
+                        <input type = "checkbox" id = "thursday" name = "thursday">
+                        <label for = "thursday">Th</label>
+                        <input type = "checkbox" id = "friday" name = "friday">
+                        <label for = "friday">F</label>
+                        <input type = "checkbox" id = "saturday" name = "saturday">
+                        <label for = "saturday">Sa</label>
+
+                        <p>Hours of Operation:</p>
+                        <input type="time" id = "time_lower" min="00:00:00" max="24:00:00">
+                        <input type="time" id = "time_upper" min="00:00:00" max="24:00:00">
+                        <label for = "time"></label>
+
+                        <p>Payment Options:</p>
+                        <input type = "checkbox" id = "cash" name = "cash">
+                        <label for = "cash">Cash</label>
+                        <input type = "checkbox" id = "credit" name = "credit">
+                        <label for = "credit">Credit</label>
+                        <input type = "checkbox" id = "wic" name = "wic">
+                        <label for = "wic">WIC</label>
+
+                        <p>Goods Offered:</p>
+                        <input type = "checkbox" id = "bakedgoods" name = "bakedgoods">
+                        <label for = "baked goods">Baked Goods</label>
+                        <input type = "checkbox" id = "cheese" name = "cheese">
+                        <label for = "cheese">Cheese</label>
+                        <input type = "checkbox" id = "eggs" name = "eggs">
+                        <label for = "eggs">Eggs</label>
+                        <input type = "checkbox" id = "crafts" name = "crafts">
+                        <label for = "crafts">Crafts</label>
+                        <input type = "checkbox" id = "flowers" name = "flowers">
+                        <label for = "flowers">Flowers</label>
+
+                        <br>
+                        <br>
+                        <input type="submit" value="Filter Results">
+
+
+                    </div>
+
+                    <div class = "results">
+
+                    </div>
+
+
+
+                </div>
             </div>
 
             <div class = "map">
@@ -55,6 +113,7 @@
 
 
     <script type="module">
+
         function marketToProfile(){
             console.log('It worked!')
         }
