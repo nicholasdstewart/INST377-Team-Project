@@ -65,6 +65,8 @@ nav a:active {
 
 .main-heading {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 .main-content {
@@ -124,8 +126,13 @@ nav a:active {
 }
 
 .filter {
-    padding-left: 20px;
+    padding: 20px;
     padding-top: 5px;
+}
+
+.filter p {
+    font-size: larger;
+    text-decoration: underline #FF9F96;
 }
 
 .map-box {
@@ -133,7 +140,6 @@ nav a:active {
     height: 600px;
     background-color: white;
     border-style: double;
-    margin-left: 15px;
 }
 
 .custom .leaflet-popup-tip, 
@@ -224,10 +230,8 @@ figure {
 hr {
     margin-top: 50px;
     margin-bottom: 50px;
-    border-top: 10px solid lightgray;
+    border: 5px solid #B34E46;
     width: 800px;
-    color: lightgray;
-    border-color: lightgray;
 }
 
 #jasmine, #henley, #nicholas {
@@ -235,7 +239,7 @@ hr {
 }
 
 #jasmine:hover, #henley:hover, #nicholas:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 .name {
@@ -310,4 +314,13 @@ hr {
     width: 300px;
     height: 350px;
     background-color: lightgray;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-content, .overview {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
 }
