@@ -7,15 +7,18 @@ import fetch from 'node-fetch';
 // const sqlite3 = require('sqlite3').verbose(); // We're including a server-side version of SQLite, the in-memory SQL server.
 // const open = sqlite3.open; // We're including a server-side version of SQLite, the in-memory SQL server.
 import sqlite3 from 'sqlite3';
-/*import { open } from 'sqlite';*/
+import open from 'sqlite';
 /*import writeUser from './libraries/writeuser';*/
 import { router } from './server_files/api_router.js';
+import { dbTest } from './server_files/db_querying.js';
 
 // Defining initial settings for the in-memory SQL database
-//const dbSettings = {
-//    filename: './tmp/database.db', // defines the location of the database
-//   driver: sqlite3.Database // defines the computer program that implements a protocol for a database connection
-//}; 
+const dbSettings = {
+   filename: './tmp/database.db', // defines the location of the database
+   driver: sqlite3.Database // defines the computer program that implements a protocol for a database connection
+}; 
+
+dbTest()
   
   const app = express();
   const port = process.env.PORT || 3000;
@@ -38,7 +41,6 @@ function processDataForFrontEnd(req, res) {
       .then((r) => r.json())
       .then((data) => {
         //console.log(data);
-
         const market_locations = [];
 
         // Retrieving all market names and storing them in an array
@@ -61,9 +63,18 @@ function processDataForFrontEnd(req, res) {
   app.route('/api')
     // GET REQUEST HANDLING BELOW: //
     .get((req, res) => {
-      processDataForFrontEnd(req, res)
       console.log("/api get request")
-    })
+      processDataForFrontEnd(req, res);
+      console.log("processed data for front-end");
+      (async()=> {
+        const db = await open(dbSettings)
+        const result = await db.all('SELECT * FROM user', (err) => {
+          console.log('writeuser', err)
+        });
+        //console.log('Expected result', result);
+      res.json(result);
+    })()
+  })
     // POST REQUEST HANDLING BELOW: //
     .post((req, res) => {
       console.log("/api post request", req.body);

@@ -148,7 +148,7 @@
             const marker_list = [];
 
             Object.entries(jsonresponse["data"]).map((item) => {
-                console.log(item[1])
+                //console.log(item[1])
                 /* ADD MARKERS AND POP UPS HERE */
                 marker_list.push(L.marker([item[1]["latitude"], item[1]["longitude"]]).bindPopup(item[1]["name"], customOptions).addTo(mymap).openPopup());
             })
