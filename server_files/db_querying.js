@@ -22,7 +22,6 @@ export function dbTest(raw_user_data) {
 
     console.log("Database reset");
 
-
    fetch('https://data.princegeorgescountymd.gov/resource/sphi-rwax.json')
     .then((r) => r.json())
     .then((jsonData) => {
@@ -36,13 +35,13 @@ export function dbTest(raw_user_data) {
         // ADD QUERIES HERE 
 
         // Example Query:
-        database.find({ plants: "No" }, function (err, docs) {
+        database.find(raw_user_data, function (err, docs) {
             // docs is an array containing documents Mars, Earth, Jupiter
             // If no document is found, docs is equal to []
-            //console.log(docs)
+            console.log(docs)
           });
         
-          console.log(raw_user_data);
+          //console.log(raw_user_data);
         
 
     })
