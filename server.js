@@ -36,19 +36,11 @@ function processDataForFrontEnd(req, res) {
 
   // Your Fetch API call starts here
   // Note that at no point do you "return" anything from this function -
-  // it instead handles returning data to your front end at line 41.
+  // it instead handles returning data to your front end.
     fetch(baseURL)
       .then((r) => r.json())
       .then((data) => {
-        //console.log(data);
-        const market_locations = [];
-
-        // Retrieving all market names and storing them in an array
-        Object.entries(data).map((item) => {
-        market_locations.push({name: item[1]["market_name"], latitude: item[1]["location"]["latitude"], longitude: item[1]["location"]["longitude"]})
-        })
-        //console.log(market_locations);
-        res.send({ data: market_locations }); // here's where we send data to our API
+        res.send({ data: data }); // here's where we send data to our API
       })
       .catch((err) => {
         console.log(err);
@@ -63,18 +55,11 @@ function processDataForFrontEnd(req, res) {
   app.route('/api')
     // GET REQUEST HANDLING BELOW: //
     .get((req, res) => {
+
       console.log("/api get request")
-      processDataForFrontEnd(req, res);
-      console.log("processed data for front-end");
-      (async()=> {
-        const db = await open(dbSettings)
-        const result = await db.all('SELECT * FROM user', (err) => {
-          console.log('writeuser', err)
-        });
-        //console.log('Expected result', result);
-      res.json(result);
-    })()
-  })
+      res.json( {test: '123'})
+
+    })
     // POST REQUEST HANDLING BELOW: //
     .post((req, res) => {
       console.log("/api post request", req.body);

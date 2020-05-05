@@ -1,31 +1,39 @@
 import sqlite3 from 'sqlite3';
+import fetch from 'node-fetch';
+import nedb from 'nedb';
+import require from 'requirejs'
 //import {open} from sqlite3
+//import { getAPIData } from '../server.js'
+
+const Datastore = require('nedb');
 
 export function dbTest() {
-    //const sqlite3 = require('sqlite3').verbose();
 
-    let db = new sqlite3.Database(':memory', (err) => {
-        if (err) {
-            return console.error(err.message);
-        }
-        console.log('Connected to the in-memory SQlite database.');
+    const database = new Datastore('database.db') // creating a new database
+    database.loadDatabase();
 
-        // Insert data into SQL database
-        //db.run('CREATE TABLE markets(name text)');
-
-        db.run(`INSERT INTO markets(name) VALUES(?)`, ['Example Market'], function(err) {
-            if (err) {
-              return console.log(err.message);
-            }
-            // get the last insert id
-            console.log(`A row has been inserted with rowid ${this.lastID}`);
-          });
+    // reset of the database records
+    database.remove({}, { multi: true }, function (err, numRemoved) {
     });
 
-    db.close((err) => {
-        if (err) {
-        return console.error(err.message);
-        }
-        console.log('Close the database connection.');
-    });
+    
+    
+   fetch('https://data.princegeorgescountymd.gov/resource/sphi-rwax.json')
+    .then((r) => r.json())
+    .then((jsonData) => {
+        //console.log(jsonData);
+        database.insert(jsonData);
+        console.log('data inserted');
+
+        // forcing single compaction of the database (ensuring that delete statements are removed)
+        database.persistence.compactDatafile()
+        
+
+    
+    })
+    .catch((err) => {
+        console.log(err);
+        res.redirect('/error');
+      });
+    
 }

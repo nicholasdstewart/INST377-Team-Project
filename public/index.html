@@ -154,7 +154,6 @@
 
         // Creating a marker and pop up:
         // Code Referenced: https://joshuafrazier.info/leaflet-basics/ */
-        //const customPopup = 'Eppley Recreation Center';
 
         const customOptions = {
         'maxWidth': '500',
@@ -167,29 +166,10 @@
         })
         .then((data) => data.json())
         .then((jsonresponse) => {
-            
-            //console.log(jsonresponse["data"])
-
-            const marker_list = [];
-
-            Object.entries(jsonresponse["data"]).map((item) => {
-                //console.log(item[1])
-                /* ADD MARKERS AND POP UPS HERE */
-                marker_list.push(L.marker([item[1]["latitude"], item[1]["longitude"]]).bindPopup(item[1]["name"], customOptions).addTo(mymap).openPopup());
-            })
-
-            for(let i = 0; i < marker_list.length; i++)
-            {
-                marker_list[i].addEventListener("dblclick", marketToProfile)
-            }
-        
+          console.log(jsonresponse);
         })
         
         
-        //.then(console.log(data.text()))
-        
-        // Listing out all of the data on the client-side:
-        //console.log(res.data)
 
     </script>
 
