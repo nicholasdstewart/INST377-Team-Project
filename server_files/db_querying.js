@@ -1,14 +1,16 @@
+import express from 'express';
 import sqlite3 from 'sqlite3';
 import fetch from 'node-fetch';
 import nedb from 'nedb';
 import require from 'requirejs'
 import { formDataQuery } from '../server.js'
-import { raw_user_data } from '../server.js'
+//import { raw_user_data } from '../server.js'
+//const server_module = require('../server.js');
 
 
 const Datastore = require('nedb');
 
-export function dbTest() {
+export function dbTest(raw_user_data) {
 
     const database = new Datastore('database.db') // creating a new database
     database.loadDatabase();
@@ -17,6 +19,8 @@ export function dbTest() {
     // Reference: https://github.com/louischatriot/nedb/issues/84
     database.remove({}, { multi: true }, function (err, numRemoved) {
     });
+
+    console.log("Database reset");
 
 
    fetch('https://data.princegeorgescountymd.gov/resource/sphi-rwax.json')

@@ -18,7 +18,7 @@ const dbSettings = {
    driver: sqlite3.Database // defines the computer program that implements a protocol for a database connection
 }; 
 
-dbTest()
+//dbTest()
   
   const app = express();
   const port = process.env.PORT || 3000;
@@ -62,18 +62,24 @@ export function formDataQuery(form_data) {
 
   app.route('/api')
     // GET REQUEST HANDLING BELOW: //
+    /*
     .get((req, res) => {
 
-      console.log("/api get request")
-      res.json( {test: '123'})
+      //console.log("/api get request")
+      //res.json( {test: '123'})
 
     })
+    */
     // POST REQUEST HANDLING BELOW: //
     .post((req, res) => {
-      //console.log("/api post request", req.body);
-      raw_user_data = req.body;
+      console.log("/api post request", req.body);
+      let raw_user_data = req.body;
+      dbTest(raw_user_data);
+      console.log("dbTest called");
+      console.log('your post request was successful');
       
-      module.exports = { raw_user_data : raw_user_data };
+      //export let raw_user_data = "test";
+      //exports.raw_user_data = raw_user_data;
       //console.log(raw_user_data);
     })
     // PUT REQUEST HANDLING BELOW: //
@@ -84,3 +90,5 @@ export function formDataQuery(form_data) {
   app.listen(port, () => {
     console.log(`The app is listening on port ${port}!`)
   });
+
+  

@@ -166,10 +166,10 @@
 
         function getUserData(event) {
 
+
           event.preventDefault(); // prevents the page from reloading on button click
           console.log('Data submitted!')
 
-          let tuesday = document.getElementById("tuesday");
 
           const checkbox_list = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "cash", "credit",
                           "wic", "bakedgoods", "cheese", "crafts", "eggs", "flowers", "herbs", "honey", "jams", "maple",
@@ -185,15 +185,16 @@
 
           // Creating an object with form data:
           const formToSend = new FormData(form);
+          console.log("form data object created");
 
           // Using fetch to send the form data to the back-end:
           fetch("/api", {
-            method: "PUT",
+            method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(Object.fromEntries(formToSend)),
-          })
+          });
 
             // Resetting the values of the form (just in case):
             document.getElementById("form").reset();
@@ -208,8 +209,8 @@
         const form = document.getElementById('form');
         form.addEventListener("submit", getUserData);
 
-        //addEventListener()
         // Fetching data from our own server:
+        /*
         fetch("/api", {
           method: "GET"
         })
@@ -217,6 +218,7 @@
         .then((jsonresponse) => {
           console.log(jsonresponse);
         })
+        */
         
         
 
