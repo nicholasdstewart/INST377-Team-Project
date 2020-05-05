@@ -36,21 +36,21 @@
                 <h2>Find a Market</h2>
                 <div class = "find-box">
                     <div class = "filter">
-
+                      <form id = "form">
                         <p>Days:</p>
-                        <input type = "checkbox" id = "sunday" name = "sunday">
+                        <input type = "checkbox" id = "sunday" name = "sunday" value = "0">
                         <label for = "sunday">Su</label>
-                        <input type = "checkbox" id = "monday" name = "monday">
+                        <input type = "checkbox" id = "monday" name = "monday" value = "0">
                         <label for = "monday">M</label>
-                        <input type = "checkbox" id = "tuesday" name = "tuesday">
+                        <input type = "checkbox" id = "tuesday" name = "tuesday" value = "0">
                         <label for = "tuesday">T</label>
-                        <input type = "checkbox" id = "wednesday" name = "wednesday">
+                        <input type = "checkbox" id = "wednesday" name = "wednesday" value = "0">
                         <label for = "wednesday">W</label>
-                        <input type = "checkbox" id = "thursday" name = "thursday">
+                        <input type = "checkbox" id = "thursday" name = "thursday" value = "0">
                         <label for = "thursday">Th</label>
-                        <input type = "checkbox" id = "friday" name = "friday">
+                        <input type = "checkbox" id = "friday" name = "friday" value = "0">
                         <label for = "friday">F</label>
-                        <input type = "checkbox" id = "saturday" name = "saturday">
+                        <input type = "checkbox" id = "saturday" name = "saturday" value = "0">
                         <label for = "saturday">Sa</label>
 
                         <p>Hours of Operation:</p>
@@ -59,54 +59,54 @@
                         <label for = "time"></label>
 
                         <p>Payment Options:</p>
-                        <input type = "checkbox" id = "cash" name = "cash">
+                        <input type = "checkbox" id = "cash" name = "cash" value = "0">
                         <label for = "cash">Cash</label>
-                        <input type = "checkbox" id = "credit" name = "credit">
+                        <input type = "checkbox" id = "credit" name = "credit" value = "0">
                         <label for = "credit">Credit</label>
-                        <input type = "checkbox" id = "wic" name = "wic">
+                        <input type = "checkbox" id = "wic" name = "wic" value = "0">
                         <label for = "wic">WIC</label>
 
                         <p>Goods Offered:</p>
-                        <input type = "checkbox" id = "bakedgoods" name = "bakedgoods">
+                        <input type = "checkbox" id = "bakedgoods" name = "bakedgoods" value = "0">
                         <label for = "baked goods">Baked Goods</label>
-                        <input type = "checkbox" id = "cheese" name = "cheese">
+                        <input type = "checkbox" id = "cheese" name = "cheese" value = "0">
                         <label for = "cheese">Cheese</label>
-                        <input type = "checkbox" id = "crafts" name = "crafts">
+                        <input type = "checkbox" id = "crafts" name = "crafts" value = "0">
                         <label for = "crafts">Crafts</label>
-                        <input type = "checkbox" id = "eggs" name = "eggs">
+                        <input type = "checkbox" id = "eggs" name = "eggs" value = "0">
                         <label for = "eggs">Eggs</label>
-                        <input type = "checkbox" id = "flowers" name = "flowers">
+                        <input type = "checkbox" id = "flowers" name = "flowers" value = "0">
                         <label for = "flowers">Flowers</label>
-                        <input type = "checkbox" id = "herbs" name = "herbs">
+                        <input type = "checkbox" id = "herbs" name = "herbs" value = "0">
                         <label for = "herbs">Herbs</label><br>
-                        <input type = "checkbox" id = "honey" name = "honey">
+                        <input type = "checkbox" id = "honey" name = "honey" value = "0">
                         <label for = "honey">Honey</label>
-                        <input type = "checkbox" id = "jams" name = "jams">
+                        <input type = "checkbox" id = "jams" name = "jams" value = "0">
                         <label for = "jams">Jams</label>
-                        <input type = "checkbox" id = "maple" name = "maple">
+                        <input type = "checkbox" id = "maple" name = "maple" value = "0">
                         <label for = "maple">Maple</label>
-                        <input type = "checkbox" id = "meat" name = "meat">
+                        <input type = "checkbox" id = "meat" name = "meat" value = "0">
                         <label for = "meat">Meat</label>
-                        <input type = "checkbox" id = "nursery" name = "nursery">
+                        <input type = "checkbox" id = "nursery" name = "nursery" value = "0">
                         <label for = "nursery">Nursery</label>
-                        <input type = "checkbox" id = "nuts" name = "nuts">
+                        <input type = "checkbox" id = "nuts" name = "nuts" value = "0">
                         <label for = "nuts">Nuts</label>
-                        <input type = "checkbox" id = "plants" name = "plants">
+                        <input type = "checkbox" id = "plants" name = "plants" value = "0">
                         <label for = "plants">Plants</label><br>
-                        <input type = "checkbox" id = "poultry" name = "poultry">
+                        <input type = "checkbox" id = "poultry" name = "poultry" value = "0">
                         <label for = "poultry">Poultry</label>
-                        <input type = "checkbox" id = "prep" name = "prep">
+                        <input type = "checkbox" id = "prep" name = "prep" value = "0">
                         <label for = "prep">Prepared</label>
-                        <input type = "checkbox" id = "soap" name = "soap">
+                        <input type = "checkbox" id = "soap" name = "soap" value = "0">
                         <label for = "soap">Soap</label>
-                        <input type = "checkbox" id = "trees" name = "trees">
+                        <input type = "checkbox" id = "trees" name = "trees" value = "0">
                         <label for = "trees">Trees</label>
-                        <input type = "checkbox" id = "veg" name = "veg">
+                        <input type = "checkbox" id = "veg" name = "veg" value = "0">
                         <label for = "veg">Vegetables</label>
                         <br>
                         <br>
-                        <input type="submit" value="Filter Results">
-
+                        <button type="submit">"Filter Results"</button>
+                      </form>
 
                     </div>
 
@@ -160,6 +160,55 @@
         'className' : 'custom'
         }
 
+        /**********************/
+        /* PROCESS USER INPUT */
+        /**********************/
+
+        function getUserData(event) {
+
+          event.preventDefault(); // prevents the page from reloading on button click
+          console.log('Data submitted!')
+
+          let tuesday = document.getElementById("tuesday");
+
+          const checkbox_list = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "cash", "credit",
+                          "wic", "bakedgoods", "cheese", "crafts", "eggs", "flowers", "herbs", "honey", "jams", "maple",
+                          "meat", "nursery", "nuts", "plants", "poultry", "prep", "soap", "trees", "veg"];
+
+          // If a checkbox is checked, that checkbox's element value becomes "1"
+          checkbox_list.forEach((item) => {
+            let box_item = document.getElementById(item);
+            if (box_item.checked) {
+              box_item.value = "1";
+            }
+          })
+
+          // Creating an object with form data:
+          const formToSend = new FormData(form);
+
+          // Using fetch to send the form data to the back-end:
+          fetch("/api", {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(Object.fromEntries(formToSend)),
+          })
+
+            // Resetting the values of the form (just in case):
+            document.getElementById("form").reset();
+
+            // Checkbox element values are reset to "0"
+            checkbox_list.forEach((item) => {
+              let box_item = document.getElementById(item);
+              box_item.value = "0";
+            })
+        } // end of getUserData function
+        
+        const form = document.getElementById('form');
+        form.addEventListener("submit", getUserData);
+
+        //addEventListener()
         // Fetching data from our own server:
         fetch("/api", {
           method: "GET"

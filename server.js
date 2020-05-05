@@ -29,7 +29,7 @@ dbTest()
   //app.use('/api', routes);
 
 // ********************************************** //
-// NOTE: Function to pull data from PG County API //
+// NOTE: Function to PULL DATA from PG County API //
 // ********************************************** //
 function processDataForFrontEnd(req, res) {
   const baseURL = 'https://data.princegeorgescountymd.gov/resource/sphi-rwax.json'; // Enter the URL for the data you would like to retrieve here
@@ -48,6 +48,14 @@ function processDataForFrontEnd(req, res) {
       });
 }
 
+// ************************************************** //
+// NOTE: Function to SEND FORM DATA to db_querying.js //
+// ************************************************** //
+
+export function formDataQuery(form_data) {
+  return form_data;
+}
+
   /****************/
   /* API Endpoint */
   /****************/
@@ -62,11 +70,15 @@ function processDataForFrontEnd(req, res) {
     })
     // POST REQUEST HANDLING BELOW: //
     .post((req, res) => {
-      console.log("/api post request", req.body);
+      //console.log("/api post request", req.body);
+      raw_user_data = req.body;
+      
+      module.exports = { raw_user_data : raw_user_data };
+      //console.log(raw_user_data);
     })
     // PUT REQUEST HANDLING BELOW: //
     .put((req, res) => {
-      console.log("/api put request", req.body);
+      //console.log("/api put request", req.body);
     })
 
   app.listen(port, () => {
