@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 nav a:active {
-    color: #FF9F96;
+    color: #2C661D;
 }
 
 .main-heading {
@@ -132,7 +132,7 @@ nav a:active {
 
 .filter p {
     font-size: larger;
-    text-decoration: underline #FF9F96;
+    text-decoration: underline #2C661D;
 }
 
 .map-box {
@@ -230,7 +230,7 @@ figure {
 hr {
     margin-top: 50px;
     margin-bottom: 50px;
-    border: 5px solid #B34E46;
+    border: 5px solid #2C661D;
     width: 800px;
 }
 
