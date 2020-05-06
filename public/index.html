@@ -166,7 +166,8 @@
         function getUserData(event) {
 
           // Remove previously created results table
-          let removeTable = document.getElementById('results-table');
+          let removeTable = document.querySelector('#results-container');
+          removeTable.innerHTML = "";
           //if ($('div#results-container').has(removeTable).length) {
               //let parentEl = removeTable.parentElement;
           //}
@@ -214,6 +215,10 @@
             console.log(json_response)
 
             // Update results box
+            // create h2 and append to results-container
+            let table_header = document.createElement('h2');
+            table_header.innerHTML = "Filter Results";
+            document.getElementById('results-container').appendChild(table_header);
             let table = document.createElement('table'), tr, td;
             table.setAttribute("id", "results-table");
             //let th = document.createElement('th');

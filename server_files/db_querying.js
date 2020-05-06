@@ -40,7 +40,7 @@ function dbTest(raw_user_data) {
         // Example Query:
         database.find(raw_user_data, function (err, docs) {
             // If no document is found, docs is equal to []
-            console.log(docs[1])
+            //console.log(docs[1])
             resolve(docs) // sends back all the matching documents back to the server's post request
           });
     })

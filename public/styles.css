@@ -91,7 +91,7 @@ nav a:active {
     max-width: 1000px;
     height: 400px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-left: 25px;
     margin-top: 20px;
 }

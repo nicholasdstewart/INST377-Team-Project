@@ -70,7 +70,7 @@ function processDataForFrontEnd(req, res) {
 
       dbTest(req.body)
           .then((matches) => {
-            console.log(matches);
+            //console.log(matches);
             res.json(matches); // sends this back to the front-end
           })
     })
