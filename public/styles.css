@@ -316,7 +316,7 @@ hr {
     background-color: lightgray;
 }
 
-@media screen and (max-width: 1200px) {
+/*@media screen and (max-width: 1200px) {
     .main-content, .overview {
         display: flex;
         flex-direction: column;
@@ -324,3 +324,35 @@ hr {
     }
 
 }
+*/
+/***************************************/
+/* Assignment 1 code for tablet/mobile */
+/***************************************/
+
+@media screen and (max-width: 1000px) {
+    .content {
+      justify-content: center;
+    }
+  
+    .div-one {
+      display: flex;
+  
+      flex-direction: row;
+  
+      flex-wrap: wrap;
+  
+      flex: 1 0 auto;
+  
+      justify-content: space-evenly;
+  
+      align-items: center;
+  
+      margin: 0;
+  
+      margin-bottom: 15px;
+    }
+  
+    .div-one p {
+        margin: 15px 0 0 0;
+    }
+  }
