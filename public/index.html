@@ -32,6 +32,7 @@
 
         <!-- MAIN CONTENT HTML ELEMENTS -->
         <div class = "main-content">
+          <div class = "top-content">
             <div class = "find">
                 <h2>Find a Market</h2>
                 <div class = "find-box">
@@ -110,23 +111,23 @@
 
                     </div>
 
-                    <div class = "results">
-
-                    </div>
-
-
-
                 </div>
-            </div>
-
+                </div>
+              
             <div class = "map">
                 <h2>Map</h2>
                 <div class = "map-box" id = "map-box"></div>
             </div>
+          </div>
+        
+          <div class = "bottom-content" id = "results-container">
+          
 
         </div>
-    </div>
+        </div>
+      </div>
 
+        
 
     <script type="module">
 
@@ -163,6 +164,13 @@
         /**********************/
 
         function getUserData(event) {
+
+          // Remove previously created results table
+          let removeTable = document.getElementById('results-table');
+          //if ($('div#results-container').has(removeTable).length) {
+              //let parentEl = removeTable.parentElement;
+          //}
+          //parentEl.removeChild(removeTable);
 
           // clear all markers (possibly from last search)
           mymap.eachLayer((layer) => { 
@@ -205,9 +213,27 @@
 
             console.log(json_response)
 
-        
-            //const markerGroup = L.layerGroup();
-           
+            // Update results box
+            let table = document.createElement('table'), tr, td;
+            table.setAttribute("id", "results-table");
+            //let th = document.createElement('th');
+            //th.innerHTML = "Results";
+            //table.appendChild(th);
+            json_response.forEach((item) => {
+                tr = document.createElement('tr');
+                Object.entries(item).map((market_cell) => {
+                  if (market_cell[0] == 'market_name'){
+                    td = document.createElement('td');
+                    tr.appendChild(td);
+                    td.innerHTML = market_cell[1];
+                    //console.log(market_cell[1]);
+                  }
+                })
+                table.appendChild(tr);
+            })
+            document.getElementById('results-container').appendChild(table);
+
+
             Object.entries(json_response).map((item) => {
                 //console.log(item[1]["location"]['latitude']);
                 /* ADD MARKERS AND POP UPS HERE */
@@ -215,8 +241,7 @@
                 //L.marker([item[1]["location"]["latitude"], item[1]["location"]["longitude"]]).bindPopup(item[1]["market_name"], customOptions).addTo(mymap).openPopup();
                 mymap.addLayer(L.marker([item[1]["location"]["latitude"], item[1]["location"]["longitude"]]).bindPopup(item[1]["market_name"], customOptions));
           })
-          //markerGroup.addTo(mymap);
-          //markerGroup.removeFrom(mymap); removes markers from map
+
           mymap.eachLayer((layer) => console.log(layer))
           console.log(tileLayer)
         });

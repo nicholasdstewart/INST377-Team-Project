@@ -71,12 +71,29 @@ nav a:active {
 
 .main-content {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /*margin-left: 20px;*/
+}
+
+.top-content {
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     animation: fadein 2s;
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -o-animation: fadein 2s; /* Opera */
+}
+
+.bottom-content {
+    /*background-color: lightgray;*/
+    max-width: 1000px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+    margin-top: 20px;
 }
 
 /* Credit to 'A.M.K.' on Stack Overflow:
@@ -159,6 +176,22 @@ h2 {
 .find:hover h2, .map:hover h2 {
     transform: scale(1.5)
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 
 /************************/
 /* Style for About Page */
