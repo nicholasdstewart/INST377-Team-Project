@@ -140,7 +140,7 @@
           const mymap = L.map('map-box').setView([38.9881, -76.9416], 13);
 
           // Adding a tile layer to the map:
-          L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+          const tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
           attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
           maxZoom: 18,
           id: 'mapbox/streets-v11',
@@ -165,9 +165,10 @@
         function getUserData(event) {
 
           // clear all markers (possibly from last search)
-          // for some reason, this is getting rid of tiles...
-          mymap.eachLayer((layer) => {
-            mymap.removeLayer(layer);
+          mymap.eachLayer((layer) => { 
+            if (layer != tileLayer) { // check to see if the layer is the tile layer
+              mymap.removeLayer(layer);
+            }
           });
           
           event.preventDefault(); // prevents the page from reloading on button click
@@ -217,6 +218,7 @@
           //markerGroup.addTo(mymap);
           //markerGroup.removeFrom(mymap); removes markers from map
           mymap.eachLayer((layer) => console.log(layer))
+          console.log(tileLayer)
         });
 
             // Resetting the values of the form (just in case):
