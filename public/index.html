@@ -60,12 +60,16 @@
                         <label for = "time"></label>
 
                         <p>Payment Options:</p>
-                        <input type = "checkbox" id = "cash" name = "cash" value = "No">
-                        <label for = "cash">Cash</label>
                         <input type = "checkbox" id = "credit" name = "credit" value = "No">
                         <label for = "credit">Credit</label>
                         <input type = "checkbox" id = "wic" name = "wic" value = "No">
                         <label for = "wic">WIC</label>
+                        <input type = "checkbox" id = "wiccash" name = "wiccash" value = "No">
+                        <label for = "wiccash">WIC Cash</label>
+                        <input type = "checkbox" id = "sfmnp" name = "sfmnp" value = "No">
+                        <label for = "sfmnp">SFMNP</label>
+                        <input type = "checkbox" id = "snap" name = "snap" value = "No">
+                        <label for = "sfmnp">SNAP</label>
 
                         <p>Goods Offered:</p>
                         <input type = "checkbox" id = "bakedgoods" name = "bakedgoods" value = "No">
@@ -184,8 +188,8 @@
           console.log('Data submitted!')
 
 
-          const checkbox_list = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "cash", "credit",
-                          "wic", "bakedgoods", "cheese", "crafts", "eggs", "flowers", "herbs", "honey", "jams", "maple",
+          const checkbox_list = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "credit", "wic",
+                          "wiccash", "sfmnp", "snap", "bakedgoods", "cheese", "crafts", "eggs", "flowers", "herbs", "honey", "jams", "maple",
                           "meat", "nursery", "nuts", "plants", "poultry", "prep", "soap", "trees", "veg"];
 
           // If a checkbox is checked, that checkbox's element value becomes "1"
