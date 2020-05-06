@@ -219,23 +219,27 @@
             let table_header = document.createElement('h2');
             table_header.innerHTML = "Filter Results";
             document.getElementById('results-container').appendChild(table_header);
-            let table = document.createElement('table'), tr, td;
+            let table = document.createElement('table'), tr, td_name, td_site;
             table.setAttribute("id", "results-table");
             //let th = document.createElement('th');
             //th.innerHTML = "Results";
             //table.appendChild(th);
             json_response.forEach((item) => {
                 tr = document.createElement('tr');
-                Object.entries(item).map((market_cell) => {
-                  if (market_cell[0] == 'market_name'){
-                    td = document.createElement('td');
-                    tr.appendChild(td);
-                    td.innerHTML = market_cell[1];
-                    //console.log(market_cell[1]);
-                  }
-                })
+                td_name = document.createElement('td');
+                td_site = document.createElement('td');
+                tr.appendChild(td_name);
+                tr.appendChild(td_site)
+                td_name.innerHTML = item["market_name"];
+                if (!('website' in item)){
+                  td_site.innerHTML = "N/A";
+                }
+                else {
+                  td_site.innerHTML = item["website"]
+                }
                 table.appendChild(tr);
-            })
+                }
+            )
             document.getElementById('results-container').appendChild(table);
 
 
