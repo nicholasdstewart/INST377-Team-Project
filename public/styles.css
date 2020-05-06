@@ -43,7 +43,7 @@ nav {
     background-color: #2C661D;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
