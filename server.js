@@ -10,15 +10,13 @@ import sqlite3 from 'sqlite3';
 import open from 'sqlite';
 /*import writeUser from './libraries/writeuser';*/
 import { router } from './server_files/api_router.js';
-import { dbTest } from './server_files/db_querying.js';
+import dbTest from './server_files/db_querying.js';
 
 // Defining initial settings for the in-memory SQL database
 const dbSettings = {
    filename: './tmp/database.db', // defines the location of the database
    driver: sqlite3.Database // defines the computer program that implements a protocol for a database connection
 }; 
-
-//dbTest()
   
   const app = express();
   const port = process.env.PORT || 3000;
@@ -52,10 +50,6 @@ function processDataForFrontEnd(req, res) {
 // NOTE: Function to SEND FORM DATA to db_querying.js //
 // ************************************************** //
 
-export function formDataQuery(form_data) {
-  return form_data;
-}
-
   /****************/
   /* API Endpoint */
   /****************/
@@ -68,24 +62,22 @@ export function formDataQuery(form_data) {
       //console.log("/api get request")
       //res.json( {test: '123'})
 
-    })
+    //})  
     */
     // POST REQUEST HANDLING BELOW: //
     .post((req, res) => {
       console.log("/api post request", req.body);
-      let raw_user_data = req.body;
-      dbTest(raw_user_data);
-      console.log("dbTest called");
-      console.log('your post request was successful');
-      
-      //export let raw_user_data = "test";
-      //exports.raw_user_data = raw_user_data;
-      //console.log(raw_user_data);
+
+      dbTest(req.body)
+          .then((matches) => {
+            console.log(matches);
+            res.json(matches); // sends this back to the front-end
+          })
     })
     // PUT REQUEST HANDLING BELOW: //
     .put((req, res) => {
       //console.log("/api put request", req.body);
-    })
+    }) // 
 
   app.listen(port, () => {
     console.log(`The app is listening on port ${port}!`)

@@ -3,14 +3,16 @@ import sqlite3 from 'sqlite3';
 import fetch from 'node-fetch';
 import nedb from 'nedb';
 import require from 'requirejs'
-import { formDataQuery } from '../server.js'
+//import { formDataQuery } from '../server.js'
 //import { raw_user_data } from '../server.js'
 //const server_module = require('../server.js');
 
 
 const Datastore = require('nedb');
 
-export function dbTest(raw_user_data) {
+function dbTest(raw_user_data) {
+
+  return new Promise((resolve, reject) => {
 
     const database = new Datastore('database.db') // creating a new database
     database.loadDatabase();
@@ -31,23 +33,24 @@ export function dbTest(raw_user_data) {
 
         // forcing single compaction of the database (ensuring that delete statements are removed)
         database.persistence.compactDatafile()
+        console.log('database compacted')
 
         // ADD QUERIES HERE 
 
         // Example Query:
         database.find(raw_user_data, function (err, docs) {
-            // docs is an array containing documents Mars, Earth, Jupiter
             // If no document is found, docs is equal to []
-            console.log(docs)
+            console.log(docs[1])
+            resolve(docs) // sends back all the matching documents back to the server's post request
           });
-        
-          //console.log(raw_user_data);
-        
-
     })
+
+  })
     .catch((err) => {
         console.log(err);
         res.redirect('/error');
       });
     
 }
+
+export default dbTest
