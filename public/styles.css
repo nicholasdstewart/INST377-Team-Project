@@ -96,6 +96,30 @@ nav a:active {
     margin-top: 20px;
 }
 
+label:hover {
+    color: #B34E46
+}
+
+button {
+    padding:0.5em 3em;
+    border:0.16em solid black;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color: black;
+    text-align:center;
+    transition: all 0.15s;
+}
+
+button:hover {
+    background-color: #2C661D;
+    border: #2C661D;
+    color: white;
+}
+
 /* Credit to 'A.M.K.' on Stack Overflow:
 /* https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load*/
 @keyframes fadein {
@@ -137,7 +161,8 @@ nav a:active {
     width: 500px;
     height: 600px;
     background-color: white;
-    border-style: double;
+    /*border-style: double;*/
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
 }
@@ -156,7 +181,8 @@ nav a:active {
     width: 675px;
     height: 600px;
     background-color: white;
-    border-style: double;
+    /*border-style: double;*/
+    border-radius: 25px;
 }
 
 .custom .leaflet-popup-tip, 

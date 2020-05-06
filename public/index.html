@@ -39,37 +39,37 @@
                     <div class = "filter">
                       <form id = "form">
                         <p>Days:</p>
-                        <input type = "checkbox" id = "sunday" name = "sunday" value = "No">
+                        <input type = "checkbox" id = "sunday" name = "sunday" value = "No" disabled>
                         <label for = "sunday">Su</label>
-                        <input type = "checkbox" id = "monday" name = "monday" value = "No">
+                        <input type = "checkbox" id = "monday" name = "monday" value = "No" disabled>
                         <label for = "monday">M</label>
-                        <input type = "checkbox" id = "tuesday" name = "tuesday" value = "No">
+                        <input type = "checkbox" id = "tuesday" name = "tuesday" value = "No" disabled>
                         <label for = "tuesday">T</label>
-                        <input type = "checkbox" id = "wednesday" name = "wednesday" value = "No">
+                        <input type = "checkbox" id = "wednesday" name = "wednesday" value = "No" disabled>
                         <label for = "wednesday">W</label>
-                        <input type = "checkbox" id = "thursday" name = "thursday" value = "No">
+                        <input type = "checkbox" id = "thursday" name = "thursday" value = "No" disabled>
                         <label for = "thursday">Th</label>
-                        <input type = "checkbox" id = "friday" name = "friday" value = "No">
+                        <input type = "checkbox" id = "friday" name = "friday" value = "No" disabled>
                         <label for = "friday">F</label>
-                        <input type = "checkbox" id = "saturday" name = "saturday" value = "No">
+                        <input type = "checkbox" id = "saturday" name = "saturday" value = "No" disabled>
                         <label for = "saturday">Sa</label>
 
                         <p>Hours of Operation:</p>
-                        <input type="time" id = "time_lower" min="00:00:00" max="24:00:00">
-                        <input type="time" id = "time_upper" min="00:00:00" max="24:00:00">
+                        <input type="time" id = "time_lower" min="00:00:00" max="24:00:00" disabled>
+                        <input type="time" id = "time_upper" min="00:00:00" max="24:00:00" disabled>
                         <label for = "time"></label>
 
                         <p>Payment Options:</p>
                         <input type = "checkbox" id = "credit" name = "credit" value = "No">
-                        <label for = "credit">Credit</label>
+                        <label for = "credit", title = "Accepts payment through credit card">Credit</label>
                         <input type = "checkbox" id = "wic" name = "wic" value = "No">
-                        <label for = "wic">WIC</label>
+                        <label for = "wic", title = "Accepts checks for fruits and vegetables through the Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)">WIC</label>
                         <input type = "checkbox" id = "wiccash" name = "wiccash" value = "No">
-                        <label for = "wiccash">WIC Cash</label>
+                        <label for = "wiccash", title = "Accepts cash-value vouchers (CVV) for fruits and vegetables through the Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)">WIC Cash</label>
                         <input type = "checkbox" id = "sfmnp" name = "sfmnp" value = "No">
-                        <label for = "sfmnp">SFMNP</label>
+                        <label for = "sfmnp", title = "Accepts coupons through the Senior Farmers' Market Nutrition Program (SFMNP)">SFMNP</label>
                         <input type = "checkbox" id = "snap" name = "snap" value = "No">
-                        <label for = "sfmnp">SNAP</label>
+                        <label for = "sfmnp", title = "Allows customers to use benefits through the Supplemental Nutrition Assistance Program (SNAP)">SNAP</label>
 
                         <p>Goods Offered:</p>
                         <input type = "checkbox" id = "bakedgoods" name = "bakedgoods" value = "No">
