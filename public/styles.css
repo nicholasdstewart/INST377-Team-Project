@@ -1,10 +1,19 @@
 /***************************/
-/* COLORS:
+/* ORIGINAL COLORS:
 /* -- light green: #96FF7A
 /* -- dark green: #2C661D
 /* -- dark pink: #FF877D
 /* -- light pink: #FF9F96
 /* -- reddish: #B34E46
+/****************************/
+
+/***************************/
+/* UPDATED COLORS:
+/* -- light green: #5EFFA6
+/* -- dark green: #1EB360
+/* -- dark pink: #FF6C5E
+/* -- light pink: #FF8378
+/* -- reddish: #B33B30
 /****************************/
 
 body {
@@ -15,12 +24,28 @@ body {
     /*font-family: 'Josefin Sans', sans-serif;*/
     font-family: 'Oswald';
     margin-bottom: 30px;
-
 }
 
 h1 {
     font-family: 'Bebas Neue';
+    font-weight: 500;
+    color: black;
     font-size: 45px;
+    border: 1px solid #1EB360;
+    /*box-shadow: 1px 2px 2px black;
+    /*width: 50%;*/
+    /*height: auto;*/
+    /*padding-left: 5%;
+    /*position: absolute;*/
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #1EB360;
+}
+
+.logo {
+    border: none;
+    background-color: #FF6C5E;
 }
 
 h2 {
@@ -40,11 +65,19 @@ nav {
     padding-bottom: 1px;
     padding-top: 1px;
     /*border: 1px solid rgba(0, 0, 0, 0.2);*/
-    background-color: #2C661D;
+    background-color: #FF6C5E;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.pages {
+    justify-self: flex-end;
+}
+
+h1 {
+    justify-self: flex-start;
 }
 
 nav a {
@@ -53,6 +86,7 @@ nav a {
     margin: 15px;
     color: white;
     text-decoration: none;
+    font-style: bold;
 }
 
 nav a:hover {
@@ -60,7 +94,7 @@ nav a:hover {
 }
 
 nav a:active {
-    color: #2C661D;
+    color: #B33B30;
 }
 
 .main-heading {
@@ -88,8 +122,8 @@ nav a:active {
 
 .bottom-content {
     /*background-color: lightgray;*/
-    max-width: 1000px;
-    height: 400px;
+    /*max-width: 1000px;*/
+    /*height: 400px;*/
     display: flex;
     flex-direction: column;
     margin-left: 25px;
@@ -97,7 +131,7 @@ nav a:active {
 }
 
 label:hover {
-    color: #B34E46
+    color: #FF6C5E
 }
 
 button {
@@ -115,10 +149,11 @@ button {
 }
 
 button:hover {
-    background-color: #2C661D;
-    border: #2C661D;
+    background-color: #1EB360;
+    border: #1EB360;
     color: white;
 }
+
 
 /* Credit to 'A.M.K.' on Stack Overflow:
 /* https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load*/
@@ -174,7 +209,7 @@ button:hover {
 
 .filter p {
     font-size: larger;
-    text-decoration: underline #2C661D;
+    text-decoration: underline #B33B30;
 }
 
 .map-box {
@@ -199,25 +234,39 @@ h2 {
     transition: transform .15s
 }
 
-.find:hover h2, .map:hover h2 {
+.find:hover h2, .map:hover h2, .problem:hover h2, .approach:hover h2 {
     transform: scale(1.5)
 }
 
 table {
-    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    border-radius: 25px;
   }
   
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    font-family: 'Oswald';
+    font-style: 'light';
   }
   
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  tr:hover {
+    background-color: #FF8378;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+ }
+
+ td:hover {
+    background-color: #FF6C5E;
+    color: white;
+ }
 
 /************************/
 /* Style for About Page */
@@ -289,7 +338,7 @@ figure {
 hr {
     margin-top: 50px;
     margin-bottom: 50px;
-    border: 5px solid #2C661D;
+    border: 5px solid #FF6C5E;
     width: 800px;
 }
 

@@ -23,12 +23,15 @@
         <!-- TOP-LEVEL HTML ELEMENTS -->
         <div class = "top-level">
             <nav>
+              <h1 class = "logo">FarmFind</h1>
+              <div class = "pages">
               <a href="index.html">HOME</a>
               <a href="about.html">ABOUT US</a>
               <a href="documentation.html">DOCUMENTATION</a>
+              </div>
             </nav>
-            <h1 class = "main-heading"> HOME </h1>
         </div>
+        <h1 class = "main-heading"> HOME </h1>
 
         <!-- MAIN CONTENT HTML ELEMENTS -->
         <div class = "main-content">
@@ -239,12 +242,20 @@
                   td_site.innerHTML = "N/A";
                 }
                 else {
-                  td_site.innerHTML = item["website"]
+                  let a = document.createElement('a');
+                  /*td_site.innerHTML = item["website"]*/
+                  let link = document.createTextNode(item["website"])
+                  a.appendChild(link); 
+                  /*a.title = item["website"];*/
+                  a.href = item["website"]; 
+                  td_site.appendChild(a); 
                 }
                 table.appendChild(tr);
                 }
             )
             document.getElementById('results-container').appendChild(table);
+            let br1 = document.createElement('br');
+            document.getElementById('results-container').appendChild(br1);
 
 
             Object.entries(json_response).map((item) => {
