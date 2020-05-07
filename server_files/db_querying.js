@@ -1,7 +1,7 @@
 
 import express from "express";
 import fetch from "node-fetch";
-import nedb from 'nedb';
+/*import nedb from 'nedb';*/
 import Datastore from 'nedb';
 
 function dbTest(raw_user_data) {
