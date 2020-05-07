@@ -29,7 +29,6 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "nodemon": "^2.0.3",
-    "@std/esm": "cjs"
+    "nodemon": "^2.0.3"
   }
 }
