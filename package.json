@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "sample_server",
   "version": "1.0.0",
   "description": "A sample webserver to pull UMD.io data and push it to a local page",
@@ -29,6 +28,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "@std/esm": "cjs"
   }
 }
