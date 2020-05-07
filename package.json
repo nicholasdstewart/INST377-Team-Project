@@ -1,13 +1,11 @@
 {
-  "type":"module",
   "name": "sample_server",
   "version": "1.0.0",
   "description": "A sample webserver to pull UMD.io data and push it to a local page",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js && node --experimental-modules src/index.mjs",
-    "start:dev": "nodemon server.js"
+    "start": "nodemon --exec babel-node server.js"
   },
   "author": "Nicholas Stewart",
   "license": "CC-BY-SA-4.0",
