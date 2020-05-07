@@ -60,7 +60,7 @@ h2 {
 
 p {
     font-family: 'Oswald';
-    font-weight: 200;
+    font-weight: normal;
 }
 
 nav {
@@ -91,7 +91,7 @@ nav a {
     margin: 15px;
     color: white;
     text-decoration: none;
-    font-style: bold;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -313,18 +313,25 @@ table {
     border-color: black;
 }
 
-.problem-box {
+.problem-box, .approach-box {
     width: 450px;
-    height: 250px;
+    height: 200px;
     background-color: white;
     border-style: none;
+    padding: 10px;
+    border-radius: 25px;
 }
 
-.approach-box {
-    width: 450px;
-    height: 250px;
+.instruction-text, .sources-box {
     background-color: white;
     border-style: none;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.problem-box:hover, .approach-box:hover, .instruction-text:hover, .sources-box:hover {
+    color: #FF6C5E;
+    font-weight: bold;
 }
 
 .team {
@@ -391,52 +398,6 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-/**************************/
-/* Style for Profile Page */
-/**************************/
-
-.market-name {
-    text-align: center;
-}
-
-#profile-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.characteristics {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.characteristics-box {
-    background-color: lightgray;
-    width: 400px;
-    height: 600px;
-}
-
-.where-when {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.profile-map {
-    width: 400px;
-    height: 150px;
-    background-color: lightgray;
-}
-
-.profile-hours {
-    width: 300px;
-    height: 350px;
-    background-color: lightgray;
 }
 
 /*@media screen and (max-width: 1200px) {
