@@ -81,10 +81,13 @@
                         <label for = "cheese">Cheese</label>
                         <input type = "checkbox" id = "crafts" name = "crafts" value = "No">
                         <label for = "crafts">Crafts</label>
+                        <br>
                         <input type = "checkbox" id = "eggs" name = "eggs" value = "No">
                         <label for = "eggs">Eggs</label>
                         <input type = "checkbox" id = "flowers" name = "flowers" value = "No">
                         <label for = "flowers">Flowers</label>
+                        <input type = "checkbox" id = "seafood" name = "seafood" value = "No">
+                        <label for = "seafood">Seafood</label>
                         <input type = "checkbox" id = "herbs" name = "herbs" value = "No">
                         <label for = "herbs">Herbs</label><br>
                         <input type = "checkbox" id = "honey" name = "honey" value = "No">
@@ -103,14 +106,16 @@
                         <label for = "plants">Plants</label><br>
                         <input type = "checkbox" id = "poultry" name = "poultry" value = "No">
                         <label for = "poultry">Poultry</label>
-                        <input type = "checkbox" id = "prep" name = "prep" value = "No">
-                        <label for = "prep">Prepared</label>
+                        <input type = "checkbox" id = "prepared" name = "prepared" value = "No">
+                        <label for = "prepared">Prepared</label>
                         <input type = "checkbox" id = "soap" name = "soap" value = "No">
                         <label for = "soap">Soap</label>
                         <input type = "checkbox" id = "trees" name = "trees" value = "No">
                         <label for = "trees">Trees</label>
-                        <input type = "checkbox" id = "veg" name = "veg" value = "No">
-                        <label for = "veg">Vegetables</label>
+                        <input type = "checkbox" id = "vegetables" name = "vegetables" value = "No">
+                        <label for = "vegetables">Vegetables</label>
+                        <input type = "checkbox" id = "wine" name = "wine" value = "No">
+                        <label for = "wine">Wine</label>
                         <br>
                         <br>
                         <button type="submit">Filter Results</button>
@@ -193,7 +198,7 @@
 
           const checkbox_list = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "credit", "wic",
                           "wiccash", "sfmnp", "snap", "bakedgoods", "cheese", "crafts", "eggs", "flowers", "herbs", "honey", "jams", "maple",
-                          "meat", "nursery", "nuts", "plants", "poultry", "prep", "soap", "trees", "veg"];
+                          "meat", "nursery", "nuts", "plants", "poultry", "prepared", "soap", "trees", "vegetables", "wine", "seafood"];
 
           // If a checkbox is checked, that checkbox's element value becomes "1"
           checkbox_list.forEach((item) => {

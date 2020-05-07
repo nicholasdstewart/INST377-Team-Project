@@ -24,6 +24,11 @@ body {
     /*font-family: 'Josefin Sans', sans-serif;*/
     font-family: 'Oswald';
     margin-bottom: 30px;
+
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 h1 {
@@ -64,7 +69,7 @@ nav {
     margin: 0 0; /* provides top and bottom margin space */
     padding-bottom: 1px;
     padding-top: 1px;
-    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    border-bottom: 5px solid #B33B30;
     background-color: #FF6C5E;
     display: flex;
     flex-direction: row;
@@ -114,10 +119,6 @@ nav a:active {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
 }
 
 .bottom-content {
@@ -200,6 +201,9 @@ button:hover {
     border-radius: 25px;
     display: flex;
     flex-direction: column;
+    background: url(https://www.transparenttextures.com/patterns/absurdity.png);
+    background-color: #5effa6;
+    opacity: .8;
 }
 
 .filter {
@@ -210,6 +214,7 @@ button:hover {
 .filter p {
     font-size: larger;
     text-decoration: underline #B33B30;
+    font-style: bold;
 }
 
 .map-box {
@@ -241,15 +246,19 @@ h2 {
 table {
     border-collapse: collapse;
     width: 100%;
-    border-radius: 25px;
+    /*border-radius: 25px;*/
   }
   
   td, th {
-    border: 1px solid #dddddd;
+    /*border: 1px solid #dddddd;*/
     text-align: left;
     padding: 8px;
     font-family: 'Oswald';
     font-style: 'light';
+  }
+
+  table {
+      border-radius: 25px;
   }
   
   tr:nth-child(even) {
@@ -267,6 +276,12 @@ table {
     background-color: #FF6C5E;
     color: white;
  }
+
+ #results-container {
+        transition:10s;
+        -webkit-transition:10s;
+        -moz-transition:10s;
+    }
 
 /************************/
 /* Style for About Page */
