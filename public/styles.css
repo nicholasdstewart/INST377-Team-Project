@@ -452,7 +452,7 @@ hr {
 /* Assignment 1 code for tablet/mobile */
 /***************************************/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 760px) {
     .content {
       justify-content: center;
     }
