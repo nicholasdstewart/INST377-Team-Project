@@ -2,6 +2,9 @@
   "type": "module",
   "name": "sample_server",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.x"
+  },
   "description": "A sample webserver to pull UMD.io data and push it to a local page",
   "main": "server.js",
   "scripts": {
@@ -21,8 +24,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.5",
-    "nodemon": "^2.0.3"
+    "@babel/preset-env": "^7.9.5"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
