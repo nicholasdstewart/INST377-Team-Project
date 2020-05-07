@@ -1,16 +1,12 @@
-import express from 'express';
-import sqlite3 from 'sqlite3';
-import fetch from 'node-fetch';
+
+import express from "express";
+import fetch from "node-fetch";
 import nedb from 'nedb';
-import require from 'requirejs'
-//import { formDataQuery } from '../server.js'
-//import { raw_user_data } from '../server.js'
-//const server_module = require('../server.js');
+import Datastore from 'nedb';
 
+export function dbTest(raw_user_data) {
 
-const Datastore = require('nedb');
-
-function dbTest(raw_user_data) {
+  console.log("dbTest called");
 
   return new Promise((resolve, reject) => {
 
@@ -53,4 +49,5 @@ function dbTest(raw_user_data) {
     
 }
 
-export default dbTest
+
+
