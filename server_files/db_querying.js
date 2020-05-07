@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 import nedb from 'nedb';
 import Datastore from 'nedb';
 
-export function dbTest(raw_user_data) {
+function dbTest(raw_user_data) {
 
   console.log("dbTest called");
 
@@ -49,5 +49,6 @@ export function dbTest(raw_user_data) {
     
 }
 
+export default dbTest;
 
 
