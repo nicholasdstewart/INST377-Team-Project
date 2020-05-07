@@ -15,12 +15,8 @@
   "license": "CC-BY-SA-4.0",
   "dependencies": {
     "express": "^4.17.1",
-    "leaflet.markercluster": "^1.4.1",
     "nedb": "^1.8.0",
     "node-fetch": "^2.6.0",
-    "requirejs": "^2.3.6",
-    "sqlite": "^4.0.7",
-    "sqlite3": "^4.2.0",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",

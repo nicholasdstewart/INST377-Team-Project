@@ -3,8 +3,6 @@
 // ***************************************** //
 
 import express from "express";
-import fetch from "node-fetch";
-/*import nedb from 'nedb';*/
 import dbTest from './server_files/db_querying.js';
   
   const app = express();
