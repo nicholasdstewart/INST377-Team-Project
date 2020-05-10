@@ -1,6 +1,6 @@
 # FarmFind
 Contributors: 
-<a href = "https://github.com/nicholasdstewart">Nick Stewart</a>,  <a href = "https://github.com/jasjenand">Jasmine Anderson</a>, <a href = "https://github.com/Henley21">Henley Khranovich</a>
+<a href = "https://github.com/nicholasdstewart">Nicholas Stewart</a>,  <a href = "https://github.com/jasjenand">Jasmine Anderson</a>, <a href = "https://github.com/Henley21">Henley Khranovich</a>
 
 ## README
 
@@ -29,6 +29,14 @@ While we hope that <i>FarmFind</i> can be accessible to as many users as possibl
 
 ### How to install application and all dependencies
 
+<ol>
+<li>Download a copy of the repository folder by either opening it in Github Desktop or downloading a ZIP file.</li>
+<li>Locate the cloned repository folder via your terminal or command prompt.</li>
+<li>Run the command `npm install` to download all dependencies.</li>
+<li>Run the command `npm start` to boot up the server and view server-side messages (e.g., error messages). You should receive a message that reads `FarmFind is listening on port 3000!`</li>
+<li>Type the localhost port number from step (4) into your browser's address bar (e.g., `localhost:3000`).</li>
+  <li>Confirm that you see <i>FarmFind</i>'s home page, and begin searching!</li>
+ 
 ### How to run application on a server
 
 ### How to run tests for the software
