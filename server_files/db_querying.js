@@ -9,7 +9,7 @@ function dbTest(raw_user_data) {
 
   return new Promise((resolve, reject) => {
 
-    const database = new Datastore('/server_files/database.db') // creating a new database
+    const database = new Datastore('database.db') // creating a new database
     database.loadDatabase();
 
     // reset of the database records: 
