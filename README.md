@@ -36,6 +36,7 @@ While we hope that <i>FarmFind</i> can be accessible to as many users as possibl
 <li>Run the command `npm start` to boot up the server and view server-side messages (e.g., error messages). You should receive a message that reads <code>FarmFind is listening on port 3000!</code></li>
 <li>Type the localhost port number from step (4) into your browser's address bar (e.g., <code>localhost:3000</code>).</li>
   <li>Confirm that you see <i>FarmFind</i>'s home page, and begin searching!</li>
+</ol>
  
 ### How to run application on a server
 
@@ -60,6 +61,8 @@ The following bugs have been detected:
   </ol>
 
 ### Road-map for future development
+
+<i>FarmFind</i> could improve in several aspects. First, the creation of a <b>profile page</b> based on a given farmers market of interest could provide additional information not currently featured on the home page. Additionally, a search bar could allow users to enter text input in order to identify farmers markets based on their name and/or location. Finally, the data could be expanded. <i>FarmFind</i> currently leverages data from 2015 which, compared to APIs, does not incorporate an expansive set of records.
 
              
 
