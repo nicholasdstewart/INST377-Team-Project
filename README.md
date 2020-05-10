@@ -32,9 +32,9 @@ While we hope that <i>FarmFind</i> can be accessible to as many users as possibl
 <ol>
 <li>Download a copy of the repository folder by either opening it in Github Desktop or downloading a ZIP file.</li>
 <li>Locate the cloned repository folder via your terminal or command prompt.</li>
-<li>Run the command `npm install` to download all dependencies.</li>
-<li>Run the command `npm start` to boot up the server and view server-side messages (e.g., error messages). You should receive a message that reads `FarmFind is listening on port 3000!`</li>
-<li>Type the localhost port number from step (4) into your browser's address bar (e.g., `localhost:3000`).</li>
+<li>Run the command <code>npm install</code> to download all dependencies.</li>
+<li>Run the command `npm start` to boot up the server and view server-side messages (e.g., error messages). You should receive a message that reads <code>FarmFind is listening on port 3000!</code></li>
+<li>Type the localhost port number from step (4) into your browser's address bar (e.g., <code>localhost:3000</code>).</li>
   <li>Confirm that you see <i>FarmFind</i>'s home page, and begin searching!</li>
  
 ### How to run application on a server
@@ -43,7 +43,21 @@ While we hope that <i>FarmFind</i> can be accessible to as many users as possibl
 
 ### The API for the server application
 
+The server application incorporates POST to do the following:
+<ol>
+  <li>Process user-entered form data</li>
+  <li>Call a function ("dbQuery") to query the database of farmers markets and return results matching the specifications of the user input</li>
+  <li>Return matching results to the front-end</li>
+  
+Within "dbQuery", we have leveraged the Fetch API to load JSON from the <a href = 'https://data.princegeorgescountymd.gov/resource/sphi-rwax.json'>Farmers Market dataset's API endpoint</a>.
+
 ### Expectations regarding known bugs
+
+The following bugs have been detected:
+  <ol>
+    <li>Results are not filtered on Safari 11.1 on macOS (High Sierra).</li>
+    <li>The Leaflet map does not display, and the page reloads when results are filtered on Firefox 57 on macOS (High Sierra).</li>
+  </ol>
 
 ### Road-map for future development
 
