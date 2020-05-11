@@ -40,22 +40,26 @@ While we hope that <i>FarmFind</i> can be accessible to as many users as possibl
  
 ### How to run application on a server
 
+
+
 ### How to run tests for the software
 
 The server application generates several success messages that provide a benchmark for successful queries:
 <ul>
-  <li><code>/api post request {<p>query</p>} </code></li>
+  <li><code>/api post request {query} </code></li>
   <li><code>dbQuery called</code></li>
   <li><code>database compacted</code></li>
-  <li><code>matching documents sent to front-end</li>
+  <li><code>matching documents sent to front-end</code></li>
 </ul>
 
 Likewise, the front-end generates the following success messages:
 <ul>
-  <li>Data submitted</li>
-  <li>Form data object created</li>
+  <li><code>Data submitted</code></li>
+  <li><code>Form data object created</code></li>
   <li><code>json_response</code>: an array containing objects that represent individual farmers markets</li>
 </ul>
+
+We recommend running tests for the software by editing these console.log statements to fit your own needs as well as adding your own. We have provided the above statements as a baseline. Further, to view the results of certain tests, check your terminal or command prompt for server-side messages. For the front-end, we recommend runnings tests through Google Chrome and using the "Inspect" tool to view messages on the Console.
 
 ### The API for the server application
 
