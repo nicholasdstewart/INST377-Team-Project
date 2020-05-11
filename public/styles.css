@@ -400,7 +400,7 @@ hr {
     justify-content: center;
 }
 
-/*@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .main-content, .overview {
         display: flex;
         flex-direction: column;
@@ -408,11 +408,12 @@ hr {
     }
 
 }
-*/
+
 /***************************************/
 /* Assignment 1 code for tablet/mobile */
 /***************************************/
 
+/*
 @media screen and (max-width: 760px) {
     .content {
       justify-content: center;
@@ -440,3 +441,4 @@ hr {
         margin: 15px 0 0 0;
     }
   }
+  */

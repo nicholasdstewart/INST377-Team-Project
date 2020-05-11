@@ -193,7 +193,7 @@
           });
           
           event.preventDefault(); // prevents the page from reloading on button click
-          console.log('Data submitted!')
+          console.log('Data submitted')
 
 
           const checkbox_list = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "credit", "wic",
@@ -211,7 +211,7 @@
 
           // Creating an object with form data:
           const formToSend = new FormData(form);
-          console.log("form data object created");
+          console.log("Form data object created");
 
           // Using fetch to send the form data to the back-end:
           fetch("/api", {
@@ -270,9 +270,6 @@
                 //L.marker([item[1]["location"]["latitude"], item[1]["location"]["longitude"]]).bindPopup(item[1]["market_name"], customOptions).addTo(mymap).openPopup();
                 mymap.addLayer(L.marker([item[1]["location"]["latitude"], item[1]["location"]["longitude"]]).bindPopup(item[1]["market_name"], customOptions));
           })
-
-          mymap.eachLayer((layer) => console.log(layer))
-          console.log(tileLayer)
         });
 
             // Resetting the values of the form (just in case):

@@ -35,7 +35,7 @@ import dbTest from './server_files/db_querying.js';
     .post((req, res) => {
       console.log("/api post request", req.body);
 
-      dbTest(req.body)
+      dbQuery(req.body)
           .then((matches) => {
             //console.log(matches);
             res.json(matches); // sends this back to the front-end
@@ -47,7 +47,7 @@ import dbTest from './server_files/db_querying.js';
     }) // 
 
   app.listen(port, () => {
-    console.log(`The app is listening on port ${port}!`)
+    console.log(`FarmFind is listening on port ${port}!`)
   });
 
   

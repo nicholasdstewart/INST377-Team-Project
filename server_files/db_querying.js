@@ -3,9 +3,9 @@ import express from "express";
 import fetch from "node-fetch";
 import Datastore from 'nedb';
 
-function dbTest(raw_user_data) {
+function dbQuery(raw_user_data) {
 
-  console.log("dbTest called");
+  console.log("dbQuery called");
 
   return new Promise((resolve, reject) => {
 
@@ -37,6 +37,7 @@ function dbTest(raw_user_data) {
             // If no document is found, docs is equal to []
             //console.log(docs[1])
             resolve(docs) // sends back all the matching documents back to the server's post request
+            console.log('matching documents sent to front-end')
           });
     })
 
@@ -48,6 +49,6 @@ function dbTest(raw_user_data) {
     
 }
 
-export default dbTest;
+export default dbQuery;
 
 
