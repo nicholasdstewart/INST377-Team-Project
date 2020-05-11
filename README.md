@@ -42,6 +42,21 @@ While we hope that <i>FarmFind</i> can be accessible to as many users as possibl
 
 ### How to run tests for the software
 
+The server application generates several success messages that provide a benchmark for successful queries:
+<ul>
+  <li><code>/api post request {<p>query</p>} </code></li>
+  <li><code>dbQuery called</code></li>
+  <li><code>database compacted</code></li>
+  <li><code>matching documents sent to front-end</li>
+</ul>
+
+Likewise, the front-end generates the following success messages:
+<ul>
+  <li>Data submitted</li>
+  <li>Form data object created</li>
+  <li><code>json_response</code>: an array containing objects that represent individual farmers markets</li>
+</ul>
+
 ### The API for the server application
 
 The server application incorporates POST to do the following:
@@ -49,6 +64,7 @@ The server application incorporates POST to do the following:
   <li>Process user-entered form data</li>
   <li>Call a function ("dbQuery") to query the database of farmers markets and return results matching the specifications of the user input</li>
   <li>Return matching results to the front-end</li>
+</ol>
   
 Within "dbQuery", we have leveraged the Fetch API to load JSON from the <a href = 'https://data.princegeorgescountymd.gov/resource/sphi-rwax.json'>Farmers Market dataset's API endpoint</a>.
 
