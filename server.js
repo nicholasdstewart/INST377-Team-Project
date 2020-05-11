@@ -3,7 +3,7 @@
 // ***************************************** //
 
 import express from "express";
-import dbTest from './server_files/db_querying.js';
+import dbQuery from './server_files/db_querying.js';
   
   const app = express();
   const port = process.env.PORT || 3000;
