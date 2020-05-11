@@ -17,6 +17,7 @@ As a dynamic web application, <i>FarmFind</i> displays an interactive map and fa
 While we hope that <i>FarmFind</i> can be accessible to as many users as possible, the application has been tested and validated for the following browsers:
 
 <ul> 
+  <li>Google Chrome on PC (Version: 81.0.4044.138)</li>
   <li>Google Chrome on MacOS (Version: 81.0.4044.138)</li>
   <li>Google Chrome on iOS (Version: 13.4.1)</li>
 </ul>
@@ -82,7 +83,7 @@ The following bugs have been detected:
 
 ### Road-map for future development
 
-<i>FarmFind</i> could improve in several aspects. First, the creation of a <b>profile page</b> based on a given farmers market of interest could provide additional information not currently featured on the home page. Additionally, a search bar could allow users to enter text input in order to identify farmers markets based on their name and/or location. Finally, the data could be expanded. <i>FarmFind</i> currently leverages data from 2015 which, compared to APIs, does not incorporate an expansive set of records.
+<i>FarmFind</i> could improve in several aspects. First, the creation of a <b>profile page</b> based on a given farmers market of interest could provide additional information not currently featured on the home page. Additionally, a <b>search bar</b> could allow users to enter text input in order to identify farmers markets based on their name and/or location. Finally, the application could benefit from more <b>expansive data</b>. <i>FarmFind</i> currently leverages data from 2015 which, compared to APIs, does not incorporate an expansive set of records.
 
              
 
