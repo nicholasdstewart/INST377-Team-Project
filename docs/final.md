@@ -39,7 +39,7 @@ Officials even acknowledged the existence of such areas in 2019 upon introducing
 
 <h2>Technical System Decision Rationale</h2>
 
-<p>We chose to use the following technologies to design and develop our appliction:</p>
+<p>We chose to use the following technologies to design and develop our application:</p>
   <ul>
     <li>
     <b>HTML, CSS, and JavaScript</b> served as a foundation. Using HTML, we created an initial structure and, with CSS, we added stylistic 

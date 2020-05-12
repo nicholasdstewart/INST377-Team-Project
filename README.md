@@ -22,7 +22,7 @@ While we hope that <i>FarmFind</i> can be accessible to as many users as possibl
   <li>Google Chrome on iOS (Version: 13.4.1)</li>
 </ul>
 
-View the <b>User Manual</b> to get started.
+View the <b>[User Manual](docs/user.md)</b> to get started.
 
 To see more details, view the <b>[Developer Manual](#dev_manual)</b>.
 
