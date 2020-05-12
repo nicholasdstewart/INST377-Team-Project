@@ -27,5 +27,5 @@ program beneficiary, <i>FarmFind</i> can provide you with useful information reg
 
 
 <h2>Additional Resources</h2>
-<p>If you would like to contribute to the appliction's further development or read additional details, view the Developer's Manual incorporated in
+<p>If you would like to contribute to the application's further development or read additional details, view the Developer's Manual incorporated in
 the README.md file or view the Final Report contained in this same folder.</p>
