@@ -27,5 +27,5 @@ program beneficiary, <i>FarmFind</i> can provide you with useful information reg
 
 
 <h2>Additional Resources</h2>
-<p>If you would like to contribute to the application's further development or read additional details, view the Developer's Manual incorporated in
-the README.md file or view the Final Report contained in this same folder.</p>
+<p>If you would like to contribute to the application's further development or read additional details, view the <a href='https://github.com/nicholasdstewart/INST377-Team-Project#dev_manual'>Developer's Manual</a> incorporated in
+the README.md file or view the <a href='https://github.com/nicholasdstewart/INST377-Team-Project/blob/master/docs/final.md'>Final Report</a> contained in this same folder.</p>
