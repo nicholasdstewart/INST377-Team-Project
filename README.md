@@ -71,6 +71,8 @@ The server application incorporates POST to do the following:
   <li>Call a function ("dbQuery") to query the database of farmers markets and return results matching the specifications of the user input</li>
   <li>Return matching results to the front-end</li>
 </ol>
+
+Please note that <b>GET and PUT requests and endpoints have been commented out</b> to reduce any possible confusion of future developers. The application has worked successfully with POST; thus, the commented-out endpoints only contain drafted messages rather than functionality directly applicable to the application. 
   
 Within "dbQuery", we have leveraged the Fetch API to load JSON from the <a href = 'https://data.princegeorgescountymd.gov/resource/sphi-rwax.json'>Farmers Market dataset's API endpoint</a>.
 
