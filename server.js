@@ -26,10 +26,11 @@ import dbQuery from './server_files/db_querying.js';
     /*
     .get((req, res) => {
 
-      //console.log("/api get request")
-      //res.json( {test: '123'})
+      
+      console.log("/api get request");
+      res.send('get request successful');
 
-    //})  
+    })  
     */
     // POST REQUEST HANDLING BELOW: //
     .post((req, res) => {
@@ -42,9 +43,12 @@ import dbQuery from './server_files/db_querying.js';
           })
     })
     // PUT REQUEST HANDLING BELOW: //
+    /*
     .put((req, res) => {
-      //console.log("/api put request", req.body);
-    }) // 
+      console.log("/api put request", req.body);
+      res.json(req.body);
+    }) 
+    */
 
   app.listen(port, () => {
     console.log(`FarmFind is listening on port ${port}!`)
