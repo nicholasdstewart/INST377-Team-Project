@@ -25,6 +25,8 @@ program beneficiary, <i>FarmFind</i> can provide you with useful information reg
   <li>If you'd like, refresh the page and continue to search!</li>
 </ol>
 
+<b>Please note that the checkboxes corresponding to "days" and "hours of operation" are currently disabled.</b> Future work will be dedicated to ensuring that users can filter using these options.
+
 
 <h2>Additional Resources</h2>
 <p>If you would like to contribute to the application's further development or read additional details, view the <a href='https://github.com/nicholasdstewart/INST377-Team-Project#dev_manual'>Developer's Manual</a> incorporated in
