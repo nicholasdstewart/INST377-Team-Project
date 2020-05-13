@@ -86,7 +86,7 @@ The following bugs have been detected:
 
 ### Road-map for future development
 
-<i>FarmFind</i> could improve in several aspects. First, the creation of a <b>profile page</b> based on a given farmers market of interest could provide additional information not currently featured on the home page. Additionally, a <b>search bar</b> could allow users to enter text input in order to identify farmers markets based on their name and/or location. Finally, the application could benefit from more <b>expansive data</b>. <i>FarmFind</i> currently leverages data from 2015 which, compared to APIs, does not incorporate an expansive set of records.
+<i>FarmFind</i> could improve in several aspects. First, currently the checkboxes that correspond to "days" and "hours of operation" are disabled. Because of the inconsistent nature of the data's format, we decided to concentrate on other filtering options, including those corresponding to payment options and goods offered. We believe that the other checkboxes could be enabled successfully using a combination of logical operators and regular expressions that extract certain patterns from the data. Also, the creation of a <b>profile page</b> based on a given farmers market of interest could provide additional information not currently featured on the home page. Additionally, a <b>search bar</b> could allow users to enter text input in order to identify farmers markets based on their name and/or location. Finally, the application could benefit from more <b>expansive data</b>. <i>FarmFind</i> currently leverages data from 2015 which, compared to APIs, does not incorporate an expansive set of records.
 
              
 
